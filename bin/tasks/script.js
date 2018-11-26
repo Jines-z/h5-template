@@ -21,7 +21,7 @@ const local    = 'http://localhost:' + PORT
 let optionsURL   = {}
 optionsURL[ALIAS] = local
 
-const babelOptions = {
+const optionsBabel = {
     presets: [
         [
             "@babel/preset-env",
@@ -46,7 +46,7 @@ gulp.task("script", function () {
         .pipe(eslint('../.eslintrc.js'))
         .pipe(eslint.format())
         .pipe(sourceMap.init())
-        .pipe(babel(babelOptions))
+        .pipe(babel(optionsBabel))
         .pipe(browserify())
         .pipe(urlReplace(optionsURL))
         .pipe(sourceMap.write())
@@ -68,7 +68,7 @@ gulp.task("min-script", function () {
         .pipe(eslint('../.eslintrc.js'))
         .pipe(eslint.format())
         .pipe(eslint.failAfterError())
-        .pipe(babel(babelOptions))
+        .pipe(babel(optionsBabel))
         .pipe(browserify())
         .pipe(ugLify())
         .pipe(rev())
