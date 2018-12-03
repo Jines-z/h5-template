@@ -1,5 +1,7 @@
-@import 'base/reset';
 @import 'hc-agg/lib/index';
+@import './base/reset';
+@import './base/common';
+@import './base/skin';
 @import '../fonts/iconfont.css';
 
 #root {
