@@ -1,6 +1,6 @@
 import { Http, Toast } from 'hc-agg' // https://www.npmjs.com/package/hc-agg
 
-const main = {
+const App = {
     $root: document.getElementById('root'),
     http: null,
     proxy: {
@@ -11,7 +11,6 @@ const main = {
         this.initHttp()
         this.bindEvents()
         this.getData()
-        Toast.show('欢迎使用s5-cli')
     },
     initHttp() {
         const options = {
@@ -24,17 +23,13 @@ const main = {
 
     },
     async getData() {
-        const data = await this.http.get(this.proxy.example)
-        console.log(data)
-
-        // const data = {
-        //     a: 1,
-        //     b: 2
-        // }
-        // this.http.post(this.proxy.example, data).then(res => {
-        //     do something...
-        // })
+        const param = {
+            a: 1,
+            b: 2
+        }
+        const res = await this.http.get(this.proxy.example, param)
+        Toast.show(res.data.msg)
     }
 }
 
-main.init()
+App.init()
