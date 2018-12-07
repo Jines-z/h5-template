@@ -1,4 +1,4 @@
-import { Http, Toast } from 'hc-agg' // https://www.npmjs.com/package/hc-agg
+import { Http, Toast } from 's5-c' // https://www.npmjs.com/package/hc-agg
 
 const App = {
     $root: document.getElementById('root'),
