@@ -6,7 +6,7 @@ const gulp      = require('gulp'),
 const SRC_DIR  = project.srcDir
 const TEMP_DIR = project.tempDir
 
-gulp.task("mock", function () {
+gulp.task('mock', function () {
     return gulp.src([SRC_DIR + '/mock/*.json'])
         .pipe(changed(TEMP_DIR + '/mock'))
         .pipe(plumber())

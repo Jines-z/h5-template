@@ -24,22 +24,22 @@ optionsURL[ALIAS] = local
 const optionsBabel = {
     presets: [
         [
-            "@babel/preset-env",
+            '@babel/preset-env',
             {
-                modules: "commonjs",
+                modules: 'commonjs',
                 targets: {
-                    browsers: ["> 1%", "last 5 versions", "Android >= 4"]
+                    browsers: ['> 1%', 'last 5 versions', 'Android >= 4']
                 }
             }
         ]
     ],
     plugins: [
-        ["@babel/plugin-transform-runtime"],
-        ["@babel/plugin-proposal-object-rest-spread", {"useBuiltIns": true}]
+        ['@babel/plugin-transform-runtime'],
+        ['@babel/plugin-proposal-object-rest-spread', {'useBuiltIns': true}]
     ]
 }
 
-gulp.task("script", function () {
+gulp.task('script', function () {
     return gulp.src([SRC_DIR + '/js/*.js'])
         .pipe(changed(TEMP_DIR + '/js'))
         .pipe(plumber())
@@ -54,7 +54,7 @@ gulp.task("script", function () {
 
 })
 
-gulp.task("script-lib", function () {
+gulp.task('script-lib', function () {
     return gulp.src([SRC_DIR + '/js/lib/*.js'])
         .pipe(changed(TEMP_DIR + '/js/lib'))
         .pipe(plumber())
@@ -63,7 +63,7 @@ gulp.task("script-lib", function () {
 
 })
 
-gulp.task("min-script", function () {
+gulp.task('min-script', function () {
     return gulp.src([SRC_DIR + '/js/*.js'])
         .pipe(eslint('../.eslintrc.js'))
         .pipe(eslint.format())
@@ -78,7 +78,7 @@ gulp.task("min-script", function () {
 
 })
 
-gulp.task("min-lib", function () {
+gulp.task('min-lib', function () {
     return gulp.src([SRC_DIR + '/js/lib/*.js'])
         .pipe(ugLify())
         .pipe(rev())

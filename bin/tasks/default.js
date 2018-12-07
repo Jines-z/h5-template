@@ -1,6 +1,6 @@
 const gulp        = require('gulp'),
-      browserSync = require("browser-sync").create(),
-      httpProxy   = require("http-proxy-middleware"),
+      browserSync = require('browser-sync').create(),
+      httpProxy   = require('http-proxy-middleware'),
       project     = require('../../project.config')
 
 const TEMP_DIR   = project.tempDir
