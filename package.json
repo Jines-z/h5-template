@@ -9,7 +9,7 @@
     "build": "cross-env NODE_ENV=production gulp --cwd bin/ b-html"
   },
   "dependencies": {
-    "s5-c": "^1.0.9"
+    "s5-c": "^1.0.10"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
