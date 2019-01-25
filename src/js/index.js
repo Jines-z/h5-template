@@ -5,12 +5,12 @@ const App = {
     http: null,
     proxy: {
         // example: '/@url/xxxxx/xxxxx' // 若配置了publicURL，@url即会自动代理
-        example: '@root/mock/example.json'
+        welcome: 'https://www.easy-mock.com/mock/5c4a79501619df726b225b53/welcome'
     },
     init() {
         this.initHttp()
         this.bindEvents()
-        this.getData()
+        this.getWelcome()
     },
     initHttp() {
         const options = {
@@ -22,12 +22,12 @@ const App = {
         // let imgArr = ['@root/images/test.jpg']
 
     },
-    async getData() {
+    async getWelcome() {
         const param = {
             a: 1,
             b: 2
         }
-        const res = await this.http.get(this.proxy.example, param)
+        const res = await this.http.get(this.proxy.welcome, param)
         Toast.show(res.data.msg)
     }
 }

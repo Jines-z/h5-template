@@ -1,7 +1,0 @@
-{
-  "success"  : true,
-  "code"   : 200,
-  "data" : {
-    "msg": "欢迎使用s5-cli"
-  }
-}

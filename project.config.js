@@ -14,7 +14,7 @@ const ex = {
     publicURL  : ''
 }
 
-// publicPath：若使用cdn，打包前请修改服务器地址，否则直接写 "./"
-// publicURL ：若使用跨域代理，请配置服务器地址
+// publicPath：若使用cdn，打包前请修改成静态资源服务器地址，否则直接写 "./"
+// publicURL ：若使用跨域代理，请配置服务器地址，使用“/@url”即可代理
 
 module.exports = ex
