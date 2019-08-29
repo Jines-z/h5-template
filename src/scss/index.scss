@@ -1,8 +1,6 @@
 @import 's5-c/lib/index';
-@import './base/reset';
-@import './base/common';
-@import './base/skin';
-@import '../fonts/iconfont.css';
+@import 'slcss/scss/index';
+@import 'slcss/scss/reset/index';
 
 html, body {
   width: 100%;
@@ -10,12 +8,8 @@ html, body {
 }
 
 #root {
-  height: 100%;
-  text-align: center;
-  padding-top: 100px;
-  box-sizing: border-box;
   .iconfont {
     font-size: 50px;
-    color: $theme-color;
+    color: #30343A;
   }
 }
