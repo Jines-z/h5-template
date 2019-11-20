@@ -47,9 +47,10 @@ const middleware = () => {
     let proxyOptions = {
         target: PUBLIC_URL + '/',
         changeOrigin: true,
-        pathRewrite: {}
+        pathRewrite: {
+            ['^/' + ALIAS_URL]: ''
+        }
     }
-    proxyOptions.pathRewrite['^/' + ALIAS_URL] = ''
     let proxy = httpProxy('/' + ALIAS_URL, proxyOptions)
     return proxy
 }
