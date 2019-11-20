@@ -2,7 +2,8 @@ const path     = require('path')
 const NODE_ENV = process.env.NODE_ENV || 'development'
 
 const ex = {
-    port       : 8099,
+    port       : 8080,
+    host       : 'web1.jituancaiyun.net',
     alias      : '@root',
     aliasURL   : '@url',
     baseDir    : __dirname,

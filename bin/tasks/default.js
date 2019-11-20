@@ -1,10 +1,12 @@
 const gulp        = require('gulp'),
       browserSync = require('browser-sync').create(),
       httpProxy   = require('http-proxy-middleware'),
+      address     = require('address'),
       project     = require('../../project.config')
 
 const TEMP_DIR   = project.tempDir
 const PORT       = project.port
+const HOST       = project.host
 const ALIAS_URL  = project.aliasURL
 const PUBLIC_URL = project.publicURL
 
@@ -53,7 +55,18 @@ const middleware = () => {
 }
 
 gulp.task('serve-html', ['script-lib', 'script', 'scss', 'html', 'fonts', 'images', 'pdf', 'mock'], function () {
+    let host = ''
+    if (HOST === '0.0.0.0') {
+        try {
+            host = address.ip()
+        } catch (e) {
+            host = 'localhost'
+        }
+    } else {
+        host = HOST || 'localhost'
+    }
     browserSync.init({
+        host,
         port: PORT,
         server: {
             baseDir: [TEMP_DIR],
