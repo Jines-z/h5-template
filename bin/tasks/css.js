@@ -22,7 +22,7 @@ let local = 'http://localhost:' + PORT
 let optionsURL = {}
 optionsURL[ALIAS] = local
 
-gulp.task('scss', function () {
+gulp.task('scss', function() {
     return gulp.src([SRC_DIR + '/scss/*.scss'])
         .pipe(changed(TEMP_DIR + '/css'))
         .pipe(sass({
@@ -33,7 +33,7 @@ gulp.task('scss', function () {
 
 })
 
-gulp.task('min-scss', function () {
+gulp.task('min-scss', function() {
     const manifest = gulp.src(OUT_DIR + '/rev/fonts/rev-manifest.json')
     return gulp.src([SRC_DIR + '/scss/*.scss'])
         .pipe(sass({

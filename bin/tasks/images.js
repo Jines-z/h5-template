@@ -10,14 +10,14 @@ const SRC_DIR  = project.srcDir
 const REV_DIR  = project.revDir
 const TEMP_DIR = project.tempDir
 
-gulp.task('images', function () {
+gulp.task('images', function() {
     return gulp.src(SRC_DIR + '/images/**/*')
         .pipe(changed(TEMP_DIR + '/images'))
         .pipe(gulp.dest(TEMP_DIR + '/images'))
 
 })
 
-gulp.task('min-images', function () {
+gulp.task('min-images', function() {
     return gulp.src(SRC_DIR + '/images/**/*')
         .pipe(imageMin({
             optimizationLevel: 7,

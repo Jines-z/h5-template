@@ -3,7 +3,7 @@ const NODE_ENV = process.env.NODE_ENV || 'development'
 
 const ex = {
     port       : 8080,
-    host       : 'web1.jituancaiyun.net',
+    host       : '0.0.0.0',
     alias      : '@root',
     aliasURL   : '@url',
     baseDir    : __dirname,

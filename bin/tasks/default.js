@@ -10,35 +10,35 @@ const HOST       = project.host
 const ALIAS_URL  = project.aliasURL
 const PUBLIC_URL = project.publicURL
 
-gulp.task('js-watch', ['script'], function (done) {
+gulp.task('js-watch', ['script'], function(done) {
     browserSync.reload()
     done()
 })
-gulp.task('lib-watch', ['script-lib'], function (done) {
+gulp.task('lib-watch', ['script-lib'], function(done) {
     browserSync.reload()
     done()
 })
-gulp.task('scss-watch', ['scss'], function (done) {
+gulp.task('scss-watch', ['scss'], function(done) {
     browserSync.reload()
     done()
 })
-gulp.task('html-watch', ['html'], function (done) {
+gulp.task('html-watch', ['html'], function(done) {
     browserSync.reload()
     done()
 })
-gulp.task('mock-watch', ['mock'], function (done) {
+gulp.task('mock-watch', ['mock'], function(done) {
     browserSync.reload()
     done()
 })
-gulp.task('images-watch', ['images'], function (done) {
+gulp.task('images-watch', ['images'], function(done) {
     browserSync.reload()
     done()
 })
-gulp.task('fonts-watch', ['fonts'], function (done) {
+gulp.task('fonts-watch', ['fonts'], function(done) {
     browserSync.reload()
     done()
 })
-gulp.task('pdf-watch', ['pdf'], function (done) {
+gulp.task('pdf-watch', ['pdf'], function(done) {
     browserSync.reload()
     done()
 })
@@ -84,6 +84,6 @@ gulp.task('serve-html', ['script-lib', 'script', 'scss', 'html', 'fonts', 'image
     gulp.watch('../src/mock/*.json', ['mock-watch'])
 })
 
-gulp.task('s-html', ['delete-temp'], function () {
+gulp.task('s-html', ['delete-temp'], function() {
     gulp.start('serve-html')
 })

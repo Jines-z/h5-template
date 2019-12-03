@@ -29,7 +29,7 @@ const options = {
 
 const config = require(path.join(SRC_DIR, 'config'))
 
-gulp.task('html', function () {
+gulp.task('html', function() {
     return gulp.src(SRC_DIR + '/*.html')
         .pipe(changed(TEMP_DIR))
         .pipe(handlebars({
@@ -40,7 +40,7 @@ gulp.task('html', function () {
 
 })
 
-gulp.task('min-html', function () {
+gulp.task('min-html', function() {
     return gulp.src(SRC_DIR + '/*.html')
         .pipe(handlebars({
             config: config

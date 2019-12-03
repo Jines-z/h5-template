@@ -1,7 +1,7 @@
-const gulp          = require('gulp'),
-      runSequence   = require('run-sequence')
+const gulp        = require('gulp'),
+      runSequence = require('run-sequence')
 
-gulp.task('b-html', ['delete-dist'], function () {
+gulp.task('b-html', ['delete-dist'], function() {
     runSequence(
         'min-fonts',
         'min-images',
